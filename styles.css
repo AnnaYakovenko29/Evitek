@@ -54,6 +54,11 @@ body {
 
 .header {
     width: 100%;
+    position: fixed;
+    background-color: #FFF;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    z-index: 1000;
 }
 
 .header-container {
@@ -125,7 +130,7 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 30px;
-    padding-top: 60px;
+    padding-top: 150px;
     padding-bottom: 60px;
 }
 
@@ -169,10 +174,7 @@ body {
     gap: 15px;
 }
 
-.hero-item-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero-icon {
     width: 50px;
     height: 50px;
 }
@@ -374,17 +376,10 @@ li.advantages-item:nth-child(2n) p {
 .vacancies {
     position: relative;
     overflow: visible;
-}
-
-.vacancies-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50vw;
-    right: -50vw;
-    bottom: 0;
-    z-index: -1;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background: radial-gradient(101.3% 90.34% at 65.94% -48.3%, #E75C6A 0%, rgba(231, 92, 106, 0.00) 100%), linear-gradient(87deg, #3BAAD0 -0.13%, #073067 61.49%, #001F59 84.97%);
+
 }
 
 .vacancies-decoration-one {
@@ -396,7 +391,6 @@ li.advantages-item:nth-child(2n) p {
 }
 
 .vacancies-title {
-    padding-top: 30px;
     margin-bottom: 30px;
     color: #FFF;
     text-align: center;
@@ -438,7 +432,6 @@ li.advantages-item:nth-child(2n) p {
     gap: 30px;
     justify-content: center;
     align-items: center; 
-    padding-bottom: 30px;   
 }
 
 .vacancies-item {
@@ -453,11 +446,19 @@ li.advantages-item:nth-child(2n) p {
     align-items: center;
     cursor: pointer;
 }
-
-/* .vacancies-item:hover,
+.vacancies-item:hover,
 .vacancies-item:focus {
     background-color: #FFF;
-} */
+}
+
+.vacancies-item:hover path,
+.vacancies-item:focus path {
+    fill: var(--Theme-neon, #49CAEB);
+}
+.vacancies-item:hover a,
+.vacancies-item:focus a  {
+    color: var(--Theme-neon, #49CAEB);
+}
 
 .vacancies-link {
     color: #FFF;
@@ -465,22 +466,6 @@ li.advantages-item:nth-child(2n) p {
     font-weight: 500;
     line-height: 1.5;
 }
-
-.vacancies-item:hover,
-.vacancies-item:focus,
-.vacancies-item a:hover,
-.vacancies-item a:focus,
-.vacancies-item svg:hover,
-.vacancies-item svg:focus {
-    background-color: #FFF;
-    color: var(--Theme-neon, #49CAEB);
-    fill: var(--Theme-neon, #49CAEB);
-}
-
-/* .vacancies-icon:hover,
-.vacancies-icon:focus {
-    fill: var(--Theme-neon, #49CAEB);
-} */
 
 /*===============JOB================*/
 
@@ -570,6 +555,10 @@ li.advantages-item:nth-child(2n) p {
     justify-content: center;
 }
 
+.footer-navigation {
+    display: none;
+}
+
 .footer-text {
     width: 100%;
     color: var(--Theme-grey, #52668B);
@@ -644,7 +633,7 @@ li.advantages-item:nth-child(2n) p {
         line-height: 2.17; 
     }
 
-    .hero-item-icon {
+    .hero-icon {
         width: 80px;
         height: 80px;
     }
@@ -720,7 +709,7 @@ li.advantages-item:nth-child(2n) p {
 
     .hero-container {
         gap: 50px;
-        padding-top: 95px;
+        padding-top: 156px;
         padding-bottom: 100px;
     }
 
@@ -775,44 +764,56 @@ li.advantages-item:nth-child(2n) p {
 
 /*===============VACANCIES================*/
 
+    .vacancies {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }  
+
+    .vacancies-container {
+        position: relative;
+    }
+
     .vacancies-decoration-one {
         display: block;
         position: absolute;
-        left: 50px;
+        left: -310px;
+        z-index: 0;
+        top: -100px;
     }
     
     .vacancies-decoration-two {
         display: block;
         position: absolute;
-        right: 97px;
+        right: -280px;
+        z-index: 0;
+        bottom: -100px;
+    }
+
+    .vacancies-item {
+        z-index: 1;
     }
 
     .vacancies-title {
-        padding-top: 100px;
+        margin: 0 auto;
         margin-bottom: 30px;
-        color: #FFF;
-        text-align: center;
         font-size: 40px;
         font-weight: 600;
         line-height: 1.5;
     }
     
     .vacancies-pretitle {
+        margin: 0 auto;
         margin-bottom: 10px;
-        color: #FFF;
-        text-align: center;
+        width: 972px;
         font-size: 24px;
         font-weight: 500;
         line-height: 1.83;
     }
     
     .vacancies-text {
+        margin: 0 auto;
         margin-bottom: 50px;
-        color: #FFF;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 2; 
+        width: 770px;
     }
     
     .vacancies-connection-title {
@@ -867,6 +868,25 @@ li.advantages-item:nth-child(2n) p {
 
     .application-text {
         width: 970px;
+    }
+
+    .footer {
+        padding-top: 43px;
+        padding-bottom: 43px;
+        margin-top: 100px;
+    }
+
+    .footer-container {
+        justify-content: space-between;
+        gap: ;
+    }
+
+    .footer-navigation {
+        display: block;
+    }
+
+    .footer-text {
+        width: auto;
     }
 
 
