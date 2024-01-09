@@ -56,8 +56,6 @@ body {
     width: 100%;
     position: fixed;
     background-color: #FFF;
-    /* left: 50%;
-    transform: translateX(-50%); */
     z-index: 1000;
 }
 
@@ -99,7 +97,7 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.5; /* 150% */
+    line-height: 1.5; 
 }
 
 .header-list {
@@ -157,7 +155,7 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 2; /* 200% */
+    line-height: 2;
 }
 
 .hero-list {
@@ -199,7 +197,7 @@ body {
     text-align: center;
     font-size: 17px;
     font-weight: 400;
-    line-height: 2.18; /* 217.647% */
+    line-height: 2.18; 
     margin-bottom: 30px;
 }
 
@@ -568,8 +566,6 @@ li.advantages-item:nth-child(2n) p {
     line-height: 1.57; 
 }
 
-
-
 @media screen and (max-width: 1199px) {
     .container {
         padding: 0 30px;
@@ -678,7 +674,6 @@ li.advantages-item:nth-child(2n) p {
         padding-top: 80px;
         padding-bottom: 80px;
     }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -878,7 +873,6 @@ li.advantages-item:nth-child(2n) p {
 
     .footer-container {
         justify-content: space-between;
-        gap: ;
     }
 
     .footer-navigation {
